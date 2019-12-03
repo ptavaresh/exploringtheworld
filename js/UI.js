@@ -8,7 +8,7 @@ class UI {
          this.markers = new L.LayerGroup();
          // Iniciar el mapa
          this.mapa = this.inicializarMapa();
-         //
+
     }
 
     inicializarMapa() {
@@ -24,6 +24,7 @@ class UI {
              attribution: '&copy; ' + enlaceMapa + ' Contributors',
              maxZoom: 18,
              }).addTo(map);
+
              //obtener lat y long al clickear el mapa
              map.on('click', 
              function(e){
@@ -72,11 +73,10 @@ class UI {
 
             this.markers.addLayer(marker);
         });
-
-        //crear icono para ubicacion actual
+        //crear icono de posicion actual
         var greenIcon = L.icon({
-            iconUrl: 'leaf-green.png',
-            shadowUrl: 'leaf-shadow.png',
+            iconUrl: 'img/leaf-green.png',
+            shadowUrl: 'img/leaf-shadow.png',
         
             iconSize:     [38, 95], // size of the icon
             shadowSize:   [50, 64], // size of the shadow
@@ -84,7 +84,6 @@ class UI {
             shadowAnchor: [4, 62],  // the same for the shadow
             popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
         });
-        //obtener la localizacion
         var {lat, lng} = this.mapa._lastCenter
         const whereiam = new L.marker([
             parseFloat(lat),
@@ -92,7 +91,7 @@ class UI {
             {icon: greenIcon}
             ).bindPopup("Estas por aqui...").openPopup();
         this.markers.addLayer(whereiam);
-        // agregar todo al mapa
+
         this.markers.addTo(this.mapa)
     }
 
