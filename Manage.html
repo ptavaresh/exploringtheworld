@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Países, ciudades y pueblos... </title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">
+            Lugares visitados por <b>Pedro Tavares</b>
+        </a>
+        <a href="index.html" id="manageButton" class="btn btn-primary" role="button" aria-pressed="true">Mapa</a>
+
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div id="lugaresForm" class="col-12"></div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div>
+                    <table class="table">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Ciudad</th>
+                                <th scope="col">Pais</th>
+                                <th scope="col">Descripcion</th>
+                                <th scope="col">Fecha estimada</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultado-lugares">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/API.js"></script>
+    <script src="js/manageUI.js"></script>
+    <script src="js/manage.js"></script>
+
+
+</body>
+
+</html>

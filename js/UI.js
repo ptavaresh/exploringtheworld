@@ -8,7 +8,6 @@ class UI {
          this.markers = new L.LayerGroup();
          // Iniciar el mapa
          this.mapa = this.inicializarMapa();
-
     }
 
     inicializarMapa() {
@@ -115,4 +114,5 @@ class UI {
         //mostrar pines
         this.mostrarPines(filtro)
     }
+
 }
